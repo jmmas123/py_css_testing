@@ -1,0 +1,78 @@
+/* Ensure the full background image is applied */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('/assets/pebbles-artistic-5120x2880-13164.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Make sure body remains transparent */
+body {
+    background: transparent !important;
+}
+
+.container {
+    background: transparent !important;
+}
+
+/* Ensure the main dash container is not white */
+.dash-container,
+.main-container,
+.content-container,
+.sidebar-container {
+    background: transparent !important;
+}
+
+/* If needed, make dbc.Row and dbc.Col transparent */
+.dbc-row, .dbc-col {
+    background: transparent !important;
+}
+
+/* Transparent Blur Overlay */
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2); /* Light dark overlay */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 1; /* Keep it above the background, but below content */
+}
+
+/* Dashboard Container: Transparent Background */
+.dash-container {
+    background: transparent; /* Slight transparency */
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Sidebar: Transparent with Blur */
+.sidebar-container {
+    background: rgba(30, 30, 30, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 20px;
+}
+
+/* Main Content: Transparent with Blur */
+.content-container {
+    background: rgba(20, 20, 20, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Remove extra black edges from graphs */
+.dcc-graph {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Ensure charts and tables don't have weird black backgrounds */
+.plotly-graph-div {
+    background: rgba(0, 0, 0, 0) !important;
+}
